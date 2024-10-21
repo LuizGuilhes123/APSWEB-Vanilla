@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Empréstimos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/emprestimos.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="itens.html">Itens</a></li>
+            <li><a href="usuarios.html">Usuários</a></li>
+            <li><a href="emprestimos.html">Empréstimos</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Controle de Empréstimos</h1>
+        <button onclick="abrirModalEmprestimo()">Registrar Novo Empréstimo</button>
+    </header>
+    <main>
+        <table id="tabelaEmprestimos">
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Item</th>
+                    <th>Data do Empréstimo</th>
+                    <th>Prazo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Empréstimos serão adicionados aqui dinamicamente -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>Desenvolvido Por Luiz Guilherme de Sousa Braga /  Matricula: 1-2023125277</p>
+    </footer>
+    <div id="modalEmprestimoContainer"></div>
+    <script src="assets/js/emprestimos.js"></script>
+</body>
+</html>

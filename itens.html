@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Itens</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/itens.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="itens.html">Itens</a></li>
+            <li><a href="usuarios.html">Usuários</a></li>
+            <li><a href="emprestimos.html">Empréstimos</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Gerenciamento de Itens</h1>
+        <button onclick="abrirModalItem()">Adicionar Item</button>
+    </header>
+    <main>
+        <table id="tabelaItens">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Autor/Diretor</th>
+                    <th>Ano</th>
+                    <th>Quantidade</th>
+                    <th>Tipo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Itens serão adicionados aqui dinamicamente -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>Desenvolvido Por Luiz Guilherme de Sousa Braga /  Matricula: 1-2023125277</p>
+    </footer>
+    <div id="modalItemContainer"></div>
+    <script src="assets/js/itens.js"></script>
+</body>
+</html>

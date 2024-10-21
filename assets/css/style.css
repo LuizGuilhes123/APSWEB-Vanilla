@@ -1,0 +1,173 @@
+/* assets/css/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #F8F9FA; /* Cinza Claro */
+    color: #333; /* Texto */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    background-color: #007BFF; /* Azul */
+    color: #FFFFFF; /* Branco */
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1,
+footer p {
+    margin-bottom: 0.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+nav a {
+    color: #FFFFFF; /* Branco */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #28A745; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #218838; /* Verde Escuro */
+}
+
+/* Estilização das Tabelas */
+table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF; /* Azul */
+    color: white; /* Branco */
+}
+
+tr:nth-child(even) {
+    background-color: #E9ECEF; /* Cinza muito claro */
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #FFFFFF; /* Branco */
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Estilo para o menu */
+nav {
+    background-color: #333; /* Cor do Menu */
+    color: white; /* Branco */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+}
+
+nav ul li {
+    padding: 15px 20px;
+}
+
+nav ul li a {
+    color: white; /* Branco */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Azul Claro */
+}
+
+/* Ajuste para que o conteúdo não fique escondido atrás do menu */
+body {
+    margin-top: 60px; /* Adiciona um espaçamento para que o conteúdo não fique atrás do menu */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+}

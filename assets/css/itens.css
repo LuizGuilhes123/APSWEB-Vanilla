@@ -1,0 +1,84 @@
+/* assets/css/itens.css */
+header {
+    background-color: #007BFF; /* Azul */
+    padding: 1em;
+    text-align: center;
+}
+
+h1 {
+    color: #FFFFFF; /* Branco */
+    margin-bottom: 1em;
+}
+
+button {
+    background-color: #FFC107; /* Amarelo */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e0a800; /* Amarelo Escuro */
+}
+
+/* Estilização específica da tabela de itens */
+#tabelaItens {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#tabelaItens th {
+    background-color: #007BFF; /* Azul */
+    color: #FFFFFF; /* Branco */
+}
+
+#tabelaItens td {
+    background-color: #E9ECEF; /* Cinza Muito Claro */
+}
+
+/* Cores para diferentes tipos de itens */
+.livro {
+    background-color: #d4edda; /* Verde Claro */
+}
+
+.revista {
+    background-color: #cfe2ff; /* Azul Claro */
+}
+
+.dvd {
+    background-color: #f8d7da; /* Rosa Claro */
+}
+
+#modalItemContainer .modal-content {
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #FFFFFF; /* Branco */
+}
+
+form#formItem label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form#formItem input,
+form#formItem select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 600px) {
+    #tabelaItens {
+        width: 100%;
+        font-size: 14px;
+    }
+}
