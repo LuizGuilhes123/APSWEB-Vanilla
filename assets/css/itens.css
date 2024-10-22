@@ -1,17 +1,17 @@
-/* assets/css/itens.css */
+
 header {
-    background-color: #333; /* Azul */
+    background-color: #333; 
     padding: 1em;
     text-align: center;
 }
 
 h1 {
-    color: #FFFFFF; /* Branco */
+    color: #FFFFFF; 
     margin-bottom: 1em;
 }
 
 button {
-    background-color: #007BFF; /* Amarelo */
+    background-color: #007BFF; 
     color: white;
     font-size: 16px;
     padding: 10px 20px;
@@ -22,42 +22,42 @@ button {
 }
 
 button:hover {
-    background-color: #007BFF; /* Amarelo Escuro */
+    background-color: #007BFF; 
 }
 
-/* Estilização específica da tabela de itens */
+
 #tabelaItens {
     width: 80%;
     margin: 20px auto;
 }
 
 #tabelaItens th {
-    background-color: #333; /* Azul */
-    color: #FFFFFF; /* Branco */
+    background-color: #333; 
+    color: #FFFFFF; 
 }
 
 #tabelaItens td {
-    background-color: #E9ECEF; /* Cinza Muito Claro */
+    background-color: #E9ECEF; 
 }
 
-/* Cores para diferentes tipos de itens */
+
 .livro {
-    background-color: #d4edda; /* Verde Claro */
+    background-color: #d4edda; 
 }
 
 .revista {
-    background-color: #cfe2ff; /* Azul Claro */
+    background-color: #cfe2ff; 
 }
 
 .dvd {
-    background-color: #f8d7da; /* Rosa Claro */
+    background-color: #f8d7da; 
 }
 
 #modalItemContainer .modal-content {
     width: 80%;
     max-width: 500px;
     padding: 20px;
-    background-color: #FFFFFF; /* Branco */
+    background-color: #FFFFFF; 
 }
 
 form#formItem label {
@@ -75,7 +75,7 @@ form#formItem select {
     border-radius: 4px;
 }
 
-/* Ajustes de responsividade */
+
 @media (max-width: 600px) {
     #tabelaItens {
         width: 100%;

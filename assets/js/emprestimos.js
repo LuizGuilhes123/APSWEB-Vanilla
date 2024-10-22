@@ -1,7 +1,5 @@
 let emprestimos = [];
-let usuarios = JSON.parse(localStorage.getItem('usuarios')) || []; // Carregar usuários salvos localmente
-let itens = JSON.parse(localStorage.getItem('itens')) || []; // Carregar itens salvos localmente
-
+let usuarios = JSON.parse(localStorage.getItem('usuarios')) || []; let itens = JSON.parse(localStorage.getItem('itens')) || []; 
 function abrirModalEmprestimo() {
     const modalContainer = document.getElementById('modalEmprestimoContainer');
     modalContainer.innerHTML = `

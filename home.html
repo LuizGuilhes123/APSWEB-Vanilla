@@ -7,208 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca - Home</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        /* Estilização do Carrossel */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9; /* Fundo suave */
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333; /* Azul do cabeçalho */
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        p {
-            margin: 5px 0;
-            font-size: 1em;
-        }
-
-        nav {
-            position: relative;
-            z-index: 11;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            max-width: 1200px; /* Largura máxima do conteúdo */
-            margin: 20px auto; /* Centraliza o conteúdo */
-            padding: 0 20px; /* Padding lateral */
-        }
-
-        /* Estilização do Carrossel */
-        .carrossel {
-            position: relative;
-            max-width: 1000px; /* Largura máxima do carrossel */
-            margin: 20px auto; /* Margem automática para centralizar */
-            overflow: hidden; /* Esconde partes da imagem que saem da área visível */
-            border-radius: 8px; /* Borda arredondada */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra leve */
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease; /* Transição suave */
-        }
-
-        .slide {
-            min-width: 100%; /* Cada slide ocupa 100% da largura do carrossel */
-            position: relative; /* Para posicionar elementos filhos */
-        }
-
-        .slide img {
-            width: 100%; /* A largura da imagem ocupa 100% do slide */
-            height: 400px; /* Altura fixa para todas as imagens */
-            object-fit: cover; /* Mantém a proporção da imagem e cobre toda a área */
-            border-radius: 8px; /* Borda arredondada */
-        }
-
-        .slide .texto-slide {
-            position: absolute;
-            top: 50%; /* Centraliza verticalmente */
-            left: 50%; /* Centraliza horizontalmente */
-            transform: translate(-50%, -50%); /* Alinha ao centro */
-            color: white; /* Cor do texto */
-            background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
-            padding: 15px; /* Padding */
-            border-radius: 8px; /* Borda arredondada */
-            text-align: center; /* Centraliza o texto */
-            width: 90%; /* Largura do texto em relação ao slide */
-        }
-
-        /* Botões de navegação */
-        .botao-navegacao {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            z-index: 1; /* Para garantir que os botões fiquem acima das imagens */
-        }
-
-        .botao-esquerdo {
-            left: 10px; /* Posiciona o botão à esquerda */
-        }
-
-        .botao-direito {
-            right: 10px; /* Posiciona o botão à direita */
-        }
-
-        /* Indicadores do Carrossel */
-        .indicadores {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .indicadores span {
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            margin: 0 5px;
-            background-color: #333; /* Azul padrão */
-            border-radius: 50%; /* Forma circular */
-            cursor: pointer; /* Mão ao passar o mouse */
-        }
-
-        .indicadores .ativo {
-            background-color: #28A745; /* Verde para indicador ativo */
-        }
-
-        /* Estilização da descrição */
-        .descricao {
-            max-width: 800px;
-            margin: 20px auto;
-            text-align: center; /* Centraliza o texto */
-            padding: 20px;
-            background-color: #ffffff; /* Fundo branco para a descrição */
-            border-radius: 8px; /* Borda arredondada */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-        }
-
-        .descricao h2 {
-            color: #333; /* Cor do título */
-            font-size: 2em; /* Tamanho maior para o título */
-        }
-
-        .descricao p {
-            color: #666; /* Cor do texto */
-            line-height: 1.5; /* Melhora a legibilidade */
-            font-size: 1.1em; /* Tamanho de fonte um pouco maior */
-        }
-
-        /* Seção de Destaques */
-        .destaques {
-            max-width: 1000px;
-            margin: 20px auto;
-            display: flex;
-            justify-content: space-between; /* Espaço entre os itens */
-            flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-        }
-
-        .item-destaque {
-            background-color: #ffffff; /* Fundo branco */
-            border: 1px solid #ddd; /* Borda cinza */
-            border-radius: 8px; /* Borda arredondada */
-            padding: 15px;
-            flex: 1 1 calc(33.33% - 20px); /* Três itens por linha, com espaço */
-            margin: 10px; /* Margem entre os itens */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-            text-align: center; /* Centraliza o texto */
-            transition: transform 0.3s; /* Transição suave ao passar o mouse */
-        }
-
-        .item-destaque:hover {
-            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-        }
-
-        .item-destaque img {
-            max-width: 100%; /* Largura máxima */
-            height: auto; /* Mantém proporção */
-            border-radius: 5px; /* Borda arredondada */
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #333; /* Azul do rodapé */
-            color: white;
-            margin-top: 20px; /* Espaçamento entre o conteúdo e o rodapé */
-        }
-    </style>
 </head>
 
 <body>
@@ -277,7 +75,6 @@
     </footer>
 
     <script>
-        // Carrossel de imagens
         let index = 0;
         const slides = document.querySelector('.slides');
         const indicatorsContainer = document.querySelector('.indicadores');
@@ -307,14 +104,216 @@
         }
 
         function prevSlide() {
-            index = (index - 1 + totalSlides) % totalSlides; // Loop reverso
+            index = (index - 1 + totalSlides) % totalSlides;
             showSlide();
         }
 
-        setInterval(nextSlide, 5000); // Troca de slides a cada 5 segundos
-
+        setInterval(nextSlide, 5000); 
         showSlide();
     </script>
 </body>
+
+<style>
+    /* Estilização do Carrossel */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9; /* Fundo suave */
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333; /* Azul do cabeçalho */
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        position: relative;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    p {
+        margin: 5px 0;
+        font-size: 1em;
+    }
+
+    nav {
+        position: relative;
+        z-index: 11;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        max-width: 1200px; /* Largura máxima do conteúdo */
+        margin: 20px auto; /* Centraliza o conteúdo */
+        padding: 0 20px; /* Padding lateral */
+    }
+
+    /* Estilização do Carrossel */
+    .carrossel {
+        position: relative;
+        max-width: 1000px; /* Largura máxima do carrossel */
+        margin: 20px auto; /* Margem automática para centralizar */
+        overflow: hidden; /* Esconde partes da imagem que saem da área visível */
+        border-radius: 8px; /* Borda arredondada */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease; /* Transição suave */
+    }
+
+    .slide {
+        min-width: 100%; /* Cada slide ocupa 100% da largura do carrossel */
+        position: relative; /* Para posicionar elementos filhos */
+    }
+
+    .slide img {
+        width: 100%; /* A largura da imagem ocupa 100% do slide */
+        height: 400px; /* Altura fixa para todas as imagens */
+        object-fit: cover; /* Mantém a proporção da imagem e cobre toda a área */
+        border-radius: 8px; /* Borda arredondada */
+    }
+
+    .slide .texto-slide {
+        position: absolute;
+        top: 50%; /* Centraliza verticalmente */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translate(-50%, -50%); /* Alinha ao centro */
+        color: white; /* Cor do texto */
+        background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+        padding: 15px; /* Padding */
+        border-radius: 8px; /* Borda arredondada */
+        text-align: center; /* Centraliza o texto */
+        width: 90%; /* Largura do texto em relação ao slide */
+    }
+
+    /* Botões de navegação */
+    .botao-navegacao {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        z-index: 1; /* Para garantir que os botões fiquem acima das imagens */
+    }
+
+    .botao-esquerdo {
+        left: 10px; /* Posiciona o botão à esquerda */
+    }
+
+    .botao-direito {
+        right: 10px; /* Posiciona o botão à direita */
+    }
+
+    /* Indicadores do Carrossel */
+    .indicadores {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .indicadores span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin: 0 5px;
+        background-color: #333; /* Azul padrão */
+        border-radius: 50%; /* Forma circular */
+        cursor: pointer; /* Mão ao passar o mouse */
+    }
+
+    .indicadores .ativo {
+        background-color: #28A745; /* Verde para indicador ativo */
+    }
+
+    /* Estilização da descrição */
+    .descricao {
+        max-width: 800px;
+        margin: 20px auto;
+        text-align: center; /* Centraliza o texto */
+        padding: 20px;
+        background-color: #ffffff; /* Fundo branco para a descrição */
+        border-radius: 8px; /* Borda arredondada */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    }
+
+    .descricao h2 {
+        color: #333; /* Cor do título */
+        font-size: 2em; /* Tamanho maior para o título */
+    }
+
+    .descricao p {
+        color: #666; /* Cor do texto */
+        line-height: 1.5; /* Melhora a legibilidade */
+        font-size: 1.1em; /* Tamanho de fonte um pouco maior */
+    }
+
+    /* Seção de Destaques */
+    .destaques {
+        max-width: 1000px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between; /* Espaço entre os itens */
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    }
+
+    .item-destaque {
+        background-color: #ffffff; /* Fundo branco */
+        border: 1px solid #ddd; /* Borda cinza */
+        border-radius: 8px; /* Borda arredondada */
+        padding: 15px;
+        flex: 1 1 calc(33.33% - 20px); /* Três itens por linha, com espaço */
+        margin: 10px; /* Margem entre os itens */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+        text-align: center; /* Centraliza o texto */
+        transition: transform 0.3s; /* Transição suave ao passar o mouse */
+    }
+
+    .item-destaque:hover {
+        transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    }
+
+    .item-destaque img {
+        max-width: 100%; /* Largura máxima */
+        height: auto; /* Mantém proporção */
+        border-radius: 5px; /* Borda arredondada */
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #333; /* Azul do rodapé */
+        color: white;
+        margin-top: 20px; /* Espaçamento entre o conteúdo e o rodapé */
+    }
+</style>
 
 </html>

@@ -1,17 +1,17 @@
-/* assets/css/emprestimos.css */
+
 header {
-    background-color: #333; /* Azul */
+    background-color: #333; 
     padding: 1em;
     text-align: center;
 }
 
 h1 {
-    color: #FFFFFF; /* Branco */
+    color: #FFFFFF; 
     margin-bottom: 1em;
 }
 
 button {
-    background-color: #007BFF; /* Amarelo */
+    background-color: #007BFF;
     color: white;
     font-size: 16px;
     padding: 10px 20px;
@@ -22,29 +22,29 @@ button {
 }
 
 button:hover {
-    background-color: #007BFF;; /* Amarelo Escuro */
+    background-color: #007BFF; 
 }
 
-/* Estilização específica da tabela de empréstimos */
+
 #tabelaEmprestimos {
     width: 80%;
     margin: 20px auto;
 }
 
 #tabelaEmprestimos th {
-    background-color: #333; /* Azul */
-    color: #FFFFFF; /* Branco */
+    background-color: #333; 
+    color: #FFFFFF; 
 }
 
 #tabelaEmprestimos td {
-    background-color: #E9ECEF; /* Cinza Muito Claro */
+    background-color: #E9ECEF; 
 }
 
 #modalEmprestimoContainer .modal-content {
     width: 80%;
     max-width: 500px;
     padding: 20px;
-    background-color: #FFFFFF; /* Branco */
+    background-color: #FFFFFF; 
 }
 
 form#formEmprestimo label {
@@ -62,7 +62,7 @@ form#formEmprestimo select {
     border-radius: 4px;
 }
 
-/* Ajustes de responsividade */
+
 @media (max-width: 600px) {
     #tabelaEmprestimos {
         width: 100%;
