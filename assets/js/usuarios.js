@@ -3,23 +3,25 @@ let usuarios = [];
 function abrirModalUsuario() {
     const modalContainer = document.getElementById('modalUsuarioContainer');
     modalContainer.innerHTML = `
-        <div class="modal-overlay" onclick="fecharModalUsuario()"></div>
-        <div class="modal-content">
-            <h2>Adicionar/Editar Usuário</h2>
-            <form id="formUsuario" onsubmit="salvarUsuario(event)">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                
-                <label for="tipo">Tipo de Usuário:</label>
-                <select id="tipo" name="tipo" required>
-                    <option value="aluno">Aluno</option>
-                    <option value="professor">Professor</option>
-                    <option value="visitante">Visitante</option>
-                </select>
-                
-                <button type="submit">Salvar</button>
-                <button type="button" onclick="fecharModalUsuario()">Cancelar</button>
-            </form>
+        <div class="modal" style="display: flex;">
+            <div class="modal-content">
+            <span class="close" onclick="fecharModalUsuario()">&times;</span>
+            <h2>Adicionar Usuário</h2>
+                <form id="formUsuario" onsubmit="salvarUsuario(event)">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="tipo">Tipo de Usuário:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="aluno">Aluno</option>
+                        <option value="professor">Professor</option>
+                        <option value="visitante">Visitante</option>
+                    </select>
+                    
+                    <button type="submit">Salvar</button>
+                    <button type="button" onclick="fecharModalUsuario()">Cancelar</button>
+                </form>
+            </div>
         </div>
     `;
     modalContainer.style.display = 'block';

@@ -16,7 +16,7 @@ body {
 
 header,
 footer {
-    background-color: #007BFF; /* Azul */
+    background-color: #333; /* Azul */
     color: #FFFFFF; /* Branco */
     text-align: center;
     padding: 1em 0;
@@ -49,7 +49,7 @@ main {
 }
 
 button {
-    background-color: #28A745; /* Verde */
+    background-color: #007BFF; /* Verde */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -60,7 +60,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838; /* Verde Escuro */
+    background-color: #007BFF; /* Verde Escuro */
 }
 
 /* Estilização das Tabelas */
@@ -79,7 +79,7 @@ td {
 }
 
 th {
-    background-color: #007BFF; /* Azul */
+    background-color: #333; /* Azul */
     color: white; /* Branco */
 }
 
@@ -88,39 +88,75 @@ tr:nth-child(even) {
 }
 
 /* Modal */
+/* Estilo do Modal */
 .modal {
-    display: none;
-    position: fixed;
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fixo em relação à tela */
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 1000; /* Z-index alto para sobrepor o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Estilo do conteúdo do Modal */
 .modal-content {
-    background-color: #FFFFFF; /* Branco */
+    background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     max-width: 500px;
-    width: 100%;
-    text-align: center;
+    width: 90%;
     position: relative;
 }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #999;
+.modal-content h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
 
-.close:hover {
-    color: #333;
+/* Outros estilos para garantir o layout */
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.modal-content input,
+.modal-content select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Botões */
+.modal-content button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.modal-content button.cancelar {
+    background-color: #dc3545;
+}
+
+/* Botão de fechar */
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 /* Estilo para o menu */

@@ -2,16 +2,19 @@
     <div class="modal-content">
         <span class="close" onclick="fecharModalUsuario()">&times;</span>
         <h2>Adicionar/Editar Usuário</h2>
-        <form id="formUsuario">
+        <form id="formUsuario" onsubmit="salvarUsuario(event)">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
+            
             <label for="tipoUsuario">Tipo:</label>
             <select id="tipoUsuario" name="tipoUsuario">
                 <option value="Aluno">Aluno</option>
                 <option value="Professor">Professor</option>
                 <option value="Visitante">Visitante</option>
             </select>
+            
             <button type="button" onclick="salvarUsuario()">Salvar</button>
+            <button type="button" class="cancelar" onclick="fecharModalUsuario()">Cancelar</button>
         </form>
     </div>
 </div>

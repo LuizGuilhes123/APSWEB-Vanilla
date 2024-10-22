@@ -1,6 +1,6 @@
 /* assets/css/itens.css */
 header {
-    background-color: #007BFF; /* Azul */
+    background-color: #333; /* Azul */
     padding: 1em;
     text-align: center;
 }
@@ -11,7 +11,7 @@ h1 {
 }
 
 button {
-    background-color: #FFC107; /* Amarelo */
+    background-color: #007BFF; /* Amarelo */
     color: white;
     font-size: 16px;
     padding: 10px 20px;
@@ -22,7 +22,7 @@ button {
 }
 
 button:hover {
-    background-color: #e0a800; /* Amarelo Escuro */
+    background-color: #007BFF; /* Amarelo Escuro */
 }
 
 /* Estilização específica da tabela de itens */
@@ -32,7 +32,7 @@ button:hover {
 }
 
 #tabelaItens th {
-    background-color: #007BFF; /* Azul */
+    background-color: #333; /* Azul */
     color: #FFFFFF; /* Branco */
 }
 
