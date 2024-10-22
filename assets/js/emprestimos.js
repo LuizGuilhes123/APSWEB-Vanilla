@@ -1,5 +1,7 @@
 let emprestimos = [];
-let usuarios = JSON.parse(localStorage.getItem('usuarios')) || []; let itens = JSON.parse(localStorage.getItem('itens')) || []; 
+let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+let itens = JSON.parse(localStorage.getItem('itens')) || [];
+
 function abrirModalEmprestimo() {
     const modalContainer = document.getElementById('modalEmprestimoContainer');
     modalContainer.innerHTML = `
@@ -76,7 +78,7 @@ function removerEmprestimo(usuario, item) {
 }
 
 function calcularPrazo(usuario) {
-    return usuario.toLowerCase().includes('professor') ? 30 : 15;
+    return usuario.toLowerCase().includes('professor') ? 30 : 15; 
 }
 
 function calcularStatus(dataEmprestimo, prazo) {
@@ -85,7 +87,7 @@ function calcularStatus(dataEmprestimo, prazo) {
     const dataLimite = new Date(dataEmprestimoDate);
     dataLimite.setDate(dataLimite.getDate() + prazo);
 
-    return dataAtual <= dataLimite ? 'Dentro do Prazo' : 'Atrasado';
+    return dataAtual <= dataLimite ? 'Dentro do Prazo' : 'Atrasado'; 
 }
 
 window.onload = () => {

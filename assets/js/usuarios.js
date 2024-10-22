@@ -5,8 +5,8 @@ function abrirModalUsuario() {
     modalContainer.innerHTML = `
         <div class="modal" style="display: flex;">
             <div class="modal-content">
-            <span class="close" onclick="fecharModalUsuario()">&times;</span>
-            <h2>Adicionar Usuário</h2>
+                <span class="close" onclick="fecharModalUsuario()">&times;</span>
+                <h2>Adicionar Usuário</h2>
                 <form id="formUsuario" onsubmit="salvarUsuario(event)">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
@@ -36,7 +36,7 @@ function fecharModalUsuario() {
 function carregarUsuarios() {
     const usuariosSalvos = JSON.parse(localStorage.getItem('usuarios')) || [];
     const tabelaUsuarios = document.getElementById('tabelaUsuarios').querySelector('tbody');
-    tabelaUsuarios.innerHTML = '';
+    tabelaUsuarios.innerHTML = ''; // Limpa a tabela antes de carregar os usuários
     usuariosSalvos.forEach(usuario => {
         const novaLinha = document.createElement('tr');
         novaLinha.innerHTML = `
@@ -63,8 +63,11 @@ function removerUsuario(button) {
     const linha = button.parentNode.parentNode;
     const nome = linha.children[0].textContent;
     let usuariosSalvos = JSON.parse(localStorage.getItem('usuarios')) || [];
+    
     usuariosSalvos = usuariosSalvos.filter(usuario => usuario.nome !== nome);
+    
     localStorage.setItem('usuarios', JSON.stringify(usuariosSalvos));
+    
     carregarUsuarios();
 }
 
@@ -72,9 +75,4 @@ window.onload = carregarUsuarios;
 
 function editarUsuario(nome) {
     alert(`Simulação de edição para o usuário: ${nome}`);
-}
-
-function removerUsuario(button) {
-    const linha = button.parentNode.parentNode;
-    linha.parentNode.removeChild(linha);
 }

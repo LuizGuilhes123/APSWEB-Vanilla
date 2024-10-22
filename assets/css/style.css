@@ -1,4 +1,4 @@
-/* assets/css/style.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +7,8 @@
 }
 
 body {
-    background-color: #F8F9FA; /* Cinza Claro */
-    color: #333; /* Texto */
+    background-color: #F8F9FA; 
+    color: #333; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,8 +16,8 @@ body {
 
 header,
 footer {
-    background-color: #333; /* Azul */
-    color: #FFFFFF; /* Branco */
+    background-color: #333; 
+    color: #FFFFFF; 
     text-align: center;
     padding: 1em 0;
 }
@@ -35,7 +35,7 @@ nav ul {
 }
 
 nav a {
-    color: #FFFFFF; /* Branco */
+    color: #FFFFFF; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -49,7 +49,7 @@ main {
 }
 
 button {
-    background-color: #007BFF; /* Verde */
+    background-color: #007BFF; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -60,10 +60,10 @@ button {
 }
 
 button:hover {
-    background-color: #007BFF; /* Verde Escuro */
+    background-color: #007BFF; 
 }
 
-/* Estilização das Tabelas */
+
 table {
     width: 100%;
     max-width: 1000px;
@@ -79,30 +79,30 @@ td {
 }
 
 th {
-    background-color: #333; /* Azul */
-    color: white; /* Branco */
+    background-color: #333; 
+    color: white; 
 }
 
 tr:nth-child(even) {
-    background-color: #E9ECEF; /* Cinza muito claro */
+    background-color: #E9ECEF; 
 }
 
-/* Modal */
-/* Estilo do Modal */
+
+
 .modal {
-    display: none; /* Escondido por padrão */
-    position: fixed; /* Fixo em relação à tela */
+    display: none; 
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    z-index: 1000; /* Z-index alto para sobrepor o conteúdo */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-/* Estilo do conteúdo do Modal */
+
 .modal-content {
     background-color: #fff;
     padding: 20px;
@@ -119,7 +119,7 @@ tr:nth-child(even) {
     margin-bottom: 20px;
 }
 
-/* Outros estilos para garantir o layout */
+
 .modal-content label {
     display: block;
     margin-bottom: 5px;
@@ -135,7 +135,7 @@ tr:nth-child(even) {
     border-radius: 5px;
 }
 
-/* Botões */
+
 .modal-content button {
     background-color: #333;
     color: white;
@@ -150,7 +150,7 @@ tr:nth-child(even) {
     background-color: #dc3545;
 }
 
-/* Botão de fechar */
+
 .modal-content .close {
     position: absolute;
     top: 10px;
@@ -159,10 +159,10 @@ tr:nth-child(even) {
     cursor: pointer;
 }
 
-/* Estilo para o menu */
+
 nav {
-    background-color: #333; /* Cor do Menu */
-    color: white; /* Branco */
+    background-color: #333; 
+    color: white; 
     position: fixed;
     top: 0;
     width: 100%;
@@ -182,21 +182,21 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Branco */
+    color: white; 
     text-decoration: none;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #007BFF; /* Azul Claro */
+    color: #007BFF; 
 }
 
-/* Ajuste para que o conteúdo não fique escondido atrás do menu */
+
 body {
-    margin-top: 60px; /* Adiciona um espaçamento para que o conteúdo não fique atrás do menu */
+    margin-top: 60px; 
 }
 
-/* Responsividade */
+
 @media (max-width: 600px) {
     table {
         font-size: 14px;
